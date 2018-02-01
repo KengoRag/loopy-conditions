@@ -7,6 +7,26 @@
  * @return { Number }
  */
 
+var num1 = 2
+var num2 = 5
+
+ function greaterNumber(a, b) {
+ 	if (a > b) {
+ 		console.log("a is greater than b");
+ 	}
+
+ 	if (b > a) {
+ 		console.log("b is greater than a");
+ 	}
+
+ 	else if (a = b) {
+ 		console.log("Both numbers are equal")
+ 	}
+
+ }
+
+ greaterNumber(num1, num2)
+
 
 /**
  * Create a function called 'stringOfNumbers'.
@@ -18,6 +38,12 @@
  * @return { String }
  */
 
+ var i; 
+
+ function stringOfNumbers(a) {
+ 	for (i=0; i <= a; i++)
+ 		text += 
+ }
 
 /**
  * Create a function called 'sumOfArray'.
