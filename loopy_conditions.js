@@ -36,15 +36,17 @@ var num2 = 5
  * "0,1,2,3,4,5,6,7,8,9,10"
  * @param  { Number } n
  * @return { String }
- */
+ */ 
 
- var i; 
+function stringOfNumbers(a) {
+  var valueA = "";
+  for (i=0; i <= a; i++) {
+    valueA += i;
+  }
+  return valueA;
+}
 
- function stringOfNumbers(a) {
- 	for (i=0; i <= a; i++)
- 		text += 
- }
-
+console.log(stringOfNumbers(10));
 /**
  * Create a function called 'sumOfArray'.
  * This function will take in a parameter that is an array.
@@ -54,6 +56,13 @@ var num2 = 5
  * @return { Number }
  */
 
+var sum = [1, 2].reduce(sumOfArray, 0);
+
+function sumOfArray (a, b) {
+	return a + b;
+}
+
+console.log(sum)
 
 /**
  * Create a function called 'getEvens'.
@@ -62,8 +71,20 @@ var num2 = 5
  * @param  { array } arr
  * @return { array }
  */
+var ray = [3, 6, 7, 8, 29]
 
+function getEvens(a) {
+	var ar = [];
 
+	for (i = 0; i <a.length; i++) {
+		if((i % 2) === 1) {
+			ar.push(a[i]);
+		}
+	}
+	return ar;
+}
+
+console.log (getEvens(ray));
 /**
  * Create a function called 'getOdds'.
  * This function will take in a parameter that is an array.
@@ -71,7 +92,20 @@ var num2 = 5
  * @param  { array } arr
  * @return { array }
  */
+var ray = [3, 6, 7, 8, 29]
 
+function getOdds(a) {
+	var ar = [];
+
+	for (i = 0; i <a.length; i++) {
+		if((i % 2) === 0) {
+			ar.push(a[i]);
+		}
+	}
+	return ar;
+}
+
+console.log (getOdds(ray));
 
 /**
  * Create a function called 'calculate'.
@@ -87,3 +121,27 @@ var num2 = 5
  * @param  { String } operator ('add', subtract, 'multiply', 'divide')
  * @return { Number/String }
  */
+
+function calculate(番号1, 　番号2, operation) {
+	if (operation == "add") {
+		return 番号1 + 番号2;
+	}
+
+	else if (operation == "subtract") {
+		return 番号1 - 番号2
+	}
+
+	else if (operation == "multiply") {
+		return 番号1 * 番号2
+	}
+
+	else if (operation == "divide") {
+		return 番号1 / 番号2
+	}
+
+	else {
+		console.log("Invalid operator")
+	}
+}
+
+console.log(calculate(6,3,"divide"))
